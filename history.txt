@@ -1,0 +1,593 @@
+    1  https://downloads.mongodb.com/compass/mongodb-mongosh_1.10.6_amd64.de
+    2  mongopkg="mongodb-mongosh_2.12.0_amd64.deb"
+    3  mongodlurl="https://downloads.mongodb.com/compass/$mongopkg"
+    4  echo -e "\nDownloading mongopackage: $mongopkg from:"
+    5  echo -e "$mongodlurl \n"
+    6  # curl -o name_to_save_as URL
+    7  curl -o $mongopkg $mongodlurl
+    8  echo -e "\n\nInstalling package: $mongopkg :\n"
+    9  # sudo dpkg -i DEB_PACKAGE
+   10  sudo dpkg -i $mongopkg
+   11  currentip=$(curl icanhazip.com)
+   12  echo -e "\n\n*********************************************************"
+   13  echo -e "You will need add your current address: $currentip"
+   14  echo "to permitted list on the 'Network Access' page "
+   15  echo "on your MongoDB Atlas page"
+   16  echo -e "*********************************************************\n\n"
+   17  mongopkg="mongodb-mongosh_2.12.0_amd64.deb"
+   18  mongodlurl="https://downloads.mongodb.com/compass/$mongopkg"
+   19  echo -e "\nDownloading mongopackage: $mongopkg from:"
+   20  echo -e "$mongodlurl \n"
+   21  # curl -o name_to_save_as URL
+   22  curl -o $mongopkg $mongodlurl
+   23  echo -e "\n\nInstalling package: $mongopkg :\n"
+   24  # sudo dpkg -i DEB_PACKAGE
+   25  sudo dpkg -i $mongopkg
+   26  currentip=$(curl icanhazip.com)
+   27  echo -e "\n\n*********************************************************"
+   28  echo -e "You will need add your current address: $currentip"
+   29  echo "to permitted list on the 'Network Access' page "
+   30  echo "on your MongoDB Atlas page"
+   31  echo -e "*********************************************************\n\n"
+   32  ls -la ~/.ssh
+   33  ls
+   34  cat ~/.ssh/id_ed25519.pub
+   35  ssh-keygen -t ed25519 -C "your_github_email@example.com"
+   36  ssh-keygen -t ed25519 -C "nathandford2005@gmail.com"
+   37  cat ~/.ssh/id_ed25519.pub
+   38  ls
+   39  cd decopsweek4
+   40  cd devopsweek4
+   41  cd devopsWeek4
+   42  ls
+   43  cd ..
+   44  cd devopsWeek4
+   45  ls
+   46  cd devsopsProj
+   47  ls
+   48  cd ..
+   49  ls
+   50  cd devsopsProj
+   51  git init
+   52  ls
+   53  nano count1.py
+   54  mv devsopsProj devopsProj
+   55  cd ..
+   56  mv devsopsProj devopsProj
+   57  ls
+   58  cd devopsProj
+   59  ls
+   60  python3 count1.py
+   61  nano count1.py
+   62  cd ..
+   63  cd devopsProj
+   64  nano count1.py
+   65  cd ..
+   66  ls
+   67  mkdir devopsWeek5
+   68  cd devopsWeek5
+   69  mkdir v1
+   70  git clone https://github.com/NathanFord1703/devopsProj.git
+   71  cd devopsProj
+   72  ls
+   73  git checkout -b ONE-V1
+   74  pwd
+   75  cd ..
+   76  rm devopsProj
+   77  ls
+   78  del devopsProj
+   79  rm -r devopsProj
+   80  cd v1
+   81  git clone https://github.com/NathanFord1703/devopsProj.git
+   82  git checkout -b ONE-V1
+   83  cd devopsProj
+   84  git clone https://github.com/NathanFord1703/devopsProj.git
+   85  cd ..
+   86  cd devopsProj
+   87  git checkout -b ONE-V1
+   88  cd ..
+   89  mkdir v2
+   90  cd v2
+   91  ls
+   92  cd devopsProj
+   93  git clone https://github.com/NathanFord1703/devopsProj.git
+   94  cd devopsProj
+   95  git checkout -b ONE-V2
+   96  ls
+   97  nano count1.py
+   98  git add .
+   99  git commit -m "Change count1 to 1(ONE)"
+  100  git push -u origin ONE-V2
+  101  cd ..
+  102  cd v1
+  103  cd devopsProj
+  104  nano count1.py
+  105  git add .
+  106  git commit -m "Change count1 to ONE(1)"
+  107  git push -u origin ONE-V1
+  108  cd ..
+  109  mkdir mergeTest
+  110  ls
+  111  cd mergeTest
+  112  git clone https://github.com/NathanFord1703/devopsProj.git
+  113  ls
+  114  cd devopsProj
+  115  git checkout main
+  116  git pull origin main
+  117  git merge origin/ONE-V1
+  118  git push origin main
+  119  git merge origin/ONE-V2
+  120  nano count1.py
+  121  git add count1.py
+  122  git commit -m "Resolve merge conflict keeping ONE-V1"
+  123  git push origin main
+  124  git branch -a
+  125  python3 count1.oy
+  126  python3 count1.py
+  127  cd ..
+  128  ls
+  129  mkdir v1-2
+  130  cd v1-2
+  131  git clone https://github.com/NathanFord1703/devopsProj.git
+  132  cd devopsProj
+  133  git checkout -b TWO-V1
+  134  nano count2.py
+  135  cd ..
+  136  mkdir v2-2
+  137  cd v2-2
+  138  git clone https://github.com/NathanFord1703/devopsProj.git
+  139  cd devopsProj
+  140  git checkout -b TWO-V2
+  141  nano count2.py
+  142  git add .
+  143  git commit -m "change count2 to 2(TWO)"
+  144  git push -u origin TWO-V2
+  145  cd ..
+  146  cd v1-2
+  147  cd devopsProj
+  148  git add .
+  149  git commit -m "change count2 to TWO(2)"
+  150  git push -u origin TWO-V1
+  151  cd ..
+  152  git checkout main
+  153  git branch -a
+  154  cd v1-2
+  155  git branch -a
+  156  cd ..
+  157  mongopkg="mongodb-mongosh_2.12.0_amd64.deb"
+  158  mongodlurl="https://downloads.mongodb.com/compass/$mongopkg"
+  159  echo -e "\nDownloading mongopackage: $mongopkg from:"
+  160  echo -e "$mongodlurl \n"
+  161  # curl -o name_to_save_as URL
+  162  curl -o $mongopkg $mongodlurl
+  163  echo -e "\n\nInstalling package: $mongopkg :\n"
+  164  # sudo dpkg -i DEB_PACKAGE
+  165  sudo dpkg -i $mongopkg
+  166  currentip=$(curl icanhazip.com)
+  167  echo -e "\n\n*********************************************************"
+  168  echo -e "You will need add your current address: $currentip"
+  169  echo "to permitted list on the 'Network Access' page "
+  170  echo "on your MongoDB Atlas page"
+  171  echo -e "*********************************************************\n\n"
+  172  mongosh "mongodb+srv://lab2.diapmzl.mongodb.net/" --apiVersion 1 --username nathandford2005_db_user
+  173  mongopkg="mongodb-mongosh_2.12.0_amd64.deb"
+  174  mongodlurl="https://downloads.mongodb.com/compass/$mongopkg"
+  175  echo -e "\nDownloading mongopackage: $mongopkg from:"
+  176  echo -e "$mongodlurl \n"
+  177  # curl -o name_to_save_as URL
+  178  curl -o $mongopkg $mongodlurl
+  179  echo -e "\n\nInstalling package: $mongopkg :\n"
+  180  # sudo dpkg -i DEB_PACKAGE
+  181  sudo dpkg -i $mongopkg
+  182  currentip=$(curl icanhazip.com)
+  183  echo -e "\n\n*********************************************************"
+  184  echo -e "You will need add your current address: $currentip"
+  185  echo "to permitted list on the 'Network Access' page "
+  186  echo "on your MongoDB Atlas page"
+  187  echo -e "*********************************************************\n\n"
+  188  git init
+  189  echo "X00229157 Test" >> testing.txt
+  190  git add .
+  191  ls
+  192  git add testing.txt
+  193  git commit -m "test commit"
+  194  git branch -M main
+  195  git remote add origin https://github.com/pearse1104/X00229157.git
+  196  git push -u origin main
+  197  gh repo create lab6 --public --description "Lab 6 repo from command line"
+  198  OWNER="NathanFord1703"
+  199  COLLAB="codyjuthan-source"
+  200  gh api -X PUT repos/$NathanFord1703/lab6/collaborators/$codyjuthan-source
+  201  nathandford2005@cloudshell:~$ gh api > -X PUT > repos/$NathanFord1703/lab6/collaborators/$codyjuthan-source
+  202  {   "message": "Not Found",;   "documentation_url": "https://docs.github.com/rest",;   "status": "404"; }
+  203  gh: Not Found (HTTP 404)
+  204  gh api -X PUT repos/NathanFord1703/lab6/collaborators/codyjuthan-source
+  205  gh api repos/NathanFord1703/lab6/collaborators/codyjuthan-source/permission
+  206  nano q1.py
+  207  ls
+  208  nano q2.py
+  209  python3 q2.py
+  210  nano q2.py
+  211  python3 q2.py
+  212  nano q3.py
+  213  ls
+  214  python3 q1.py
+  215  python3 q2.py
+  216  nano q2.py
+  217  gh api -X DELETE repos/NathanFord1703/lab6/collaborators/codyjuthan-source
+  218  git push origin main
+  219  nano q4.py
+  220  python3 q4.py
+  221  nano q4.py
+  222  python3 q4.py
+  223  nano q4.py
+  224  python3 q4.py
+  225  nano q4.py
+  226  python3 q4.py
+  227  nano q4.py
+  228  python3 q4.py
+  229  ls
+  230  gh issue create --repo NathanFord1703/lab6 --title "create hellowworld echo file" --body "echo hello pearse from lab6" --assignee "@me" --label enhancement
+  231  nano q5.py
+  232  python3 q5.py
+  233  nano q5.py
+  234  python3 q5.py
+  235  git checkout main
+  236  git pull origin main
+  237  git checkout -b Q12345
+  238  git add q*.py
+  239  git commit -m "Lab6 solutions"
+  240  git push -u origin Q12345
+  241  git remote -v
+  242  git clone https://github.com/NathanFord1703/lab6.git
+  243  git remote -v
+  244  cd lab6
+  245  git remote -v
+  246  ls
+  247  cd ..
+  248  ls
+  249  mv q*.py lab6/
+  250  ls
+  251  cd lab6
+  252  ls
+  253  git remote -v
+  254  git checkout -b Q12345
+  255  git add q*.py
+  256  git commit -m "Lab6 solutions"
+  257  git push -u origin Q12345
+  258  ls
+  259  gh pr create
+  260  gh pr create --base main --head Q12345 --title "Merging Q12345 into main" --body "Solutions for Q1-5"
+  261  git branch -a
+  262  git checkout main
+  263  git branch
+  264  git checkout Q12345
+  265  git checkout main
+  266  git checkout master
+  267  git remote show origin
+  268  git pull -u origin main
+  269  git checkout main
+  270  git switch main
+  271  git fetch origin 
+  272  git checkout -b main origin/main
+  273  git checkout Q12345
+  274  git branch main
+  275  git push origin main
+  276  git checkout main
+  277  gh pr create --base main --head Q12345 --title "Merging Q12345 into main" --body "Solutions for Q1-5"
+  278  branch -a
+  279  git branch -a
+  280  ls
+  281  git checkout main
+  282  ls
+  283  git log --oneline --decorate --graph --all
+  284  git checkout Q12345
+  285  nano q1.py
+  286  git add q1.py
+  287  git commit -m "Update for Q1 so i can do the lab correctly and merge to main"
+  288  git push origin Q12345
+  289  git checkout main
+  290  gh pr create --base main --head Q12345 --title "Merging Q12345 into main" --body "Solutions for Q1-5"
+  291  nano q7.py
+  292  gh pr merge Q12345 --merge --delete-branch=false
+  293  nano q8.py
+  294  git add q8.py
+  295  got add q7.py
+  296  git add q7.py
+  297  git commit -m "Adding Q8 and Q7"
+  298  git push origin main
+  299  git checkout main
+  300  git pull origin main
+  301  git add q7.py q8.py
+  302  git commit -m "q7 and q8 commit"
+  303  git push origin main
+  304  git checkout Q12345
+  305  git add q1.py
+  306  git commit -m "Update q1"
+  307  gh pr create   --base main   --head Q12345   --title "Merge Q12345 into main"   --body "Solutions for Q1-5"
+  308  git checkout main
+  309  git pull --rebase origin main
+  310  git push origin main
+  311  ls
+  312  git add q7.py q8.py
+  313  git commit -m "q7 and q8 push attempt"
+  314  mongopkg="mongodb-mongosh_2.12.0_amd64.deb"
+  315  mongodlurl="https://downloads.mongodb.com/compass/$mongopkg"
+  316  echo -e "\nDownloading mongopackage: $mongopkg from:"
+  317  echo -e "$mongodlurl \n"
+  318  # curl -o name_to_save_as URL
+  319  curl -o $mongopkg $mongodlurl
+  320  echo -e "\n\nInstalling package: $mongopkg :\n"
+  321  # sudo dpkg -i DEB_PACKAGE
+  322  sudo dpkg -i $mongopkg
+  323  currentip=$(curl icanhazip.com)
+  324  echo -e "\n\n*********************************************************"
+  325  echo -e "You will need add your current address: $currentip"
+  326  echo "to permitted list on the 'Network Access' page "
+  327  echo "on your MongoDB Atlas page"
+  328  echo -e "*********************************************************\n\n"
+  329  ls
+  330  mkdir CA1
+  331  cd CA1
+  332  git init
+  333  git remote -v
+  334  git remote add origin https://github.com/pearse1104/X00229157
+  335  git remote -v
+  336  git clone https://github.com/pearse1104/X00229157
+  337  ls
+  338  cd X00229157
+  339  ls
+  340  cd ..
+  341  cd X00229157
+  342  ls
+  343  git status
+  344  git init
+  345  3X0qbPNWWH9ZSO6P >> gitcode.txt
+  346  ls
+  347  "3X0qbPNWWH9ZSO6P" >> gitcode.txt
+  348  echo 3X0qbPNWWH9ZSO6P >> gitcode.txt
+  349  echo gitcode.txt
+  350  gitcode.txt
+  351  cat gitcode.txt
+  352  cd CA1
+  353  ls
+  354  cd X00229157
+  355  ls
+  356  echo "CA1 test day push" >> testing1.txt
+  357  git add .
+  358  git push -u origin
+  359  git commit -m "final test"
+  360  git push -u origin
+  361  ls
+  362  git tag
+  363  cd ..
+  364  ls
+  365  rm gitcode.txt
+  366  ls
+  367  cd CA1
+  368  cd X00229157
+  369  ls
+  370  git clone https://github.com/pearse1104/X00229157
+  371  git branch -a
+  372  git branch
+  373  git auth login
+  374  git status
+  375  ls
+  376  cat testing.txt
+  377  git branch
+  378  git branch -a
+  379  git pull origin main
+  380  git branch -a
+  381  git branch
+  382  ls
+  383  rm X00229157
+  384  rd X00229157
+  385  rm -r X00229157
+  386  ls
+  387  cd ..
+  388  mkdir DevOpsCA1
+  389  cd DevOpsCA1
+  390  git clone https://github.com/pearse1104/X00229157
+  391  ls
+  392  cd X00229157
+  393  ls
+  394  cd ..
+  395  git clone https://github.com/pearse1104/CA1-MONDAY
+  396  LS
+  397  ls
+  398  cd CA1-MONDAY
+  399  ls
+  400  bash runme.sh
+  401  cat runme.txt
+  402  bash runme.txt
+  403  ls
+  404  git remote add origin https://github.com/NathanFord1703/devopsCA1.git
+  405  git add .
+  406  git init
+  407  ls
+  408  git remote add origin https://github.com/NathanFord1703/devopsCA1.git
+  409  git commit -m "CA1 commit"
+  410  ls
+  411  git add runme.txt
+  412  git add me.txt
+  413  git commit -m "CA1 commit"
+  414  git remote add origin https://github.com/NathanFord1703/devopsCA1.git
+  415  git push -u origin https://github.com/NathanFord1703/devopsCA1.git
+  416  git push -u origin main
+  417  cat me.txt
+  418  git clone https://github.com/NathanFord1703/devopsCA1.git
+  419  ls
+  420  mv me.txt devopsCA1
+  421  ls
+  422  cd devopsCA1
+  423  ls
+  424  cd ..
+  425  mv runme.txt devopsCA1
+  426  cd devopsCA1
+  427  ls
+  428  git add .
+  429  git commit -m "CA1 Q1 commit"
+  430  git push -u origin main
+  431  cd ..
+  432  ls
+  433  cd X00229157
+  434  ls
+  435  gh issue create --title "Issue one" --body "Q2"
+  436  git issue list
+  437  git issues list
+  438  cd ..
+  439  cd X00229157
+  440  git pull origin main
+  441  ls
+  442  cd ..
+  443  ls
+  444  cd CA1-MONDAY
+  445  ls
+  446  cd ..
+  447  cd X00229157
+  448  cd ..
+  449  ls
+  450  cd CA1-MONDAY
+  451  ls
+  452  cd devopsCA1
+  453  ls
+  454  mv me.txt ..
+  455  mv runme.txt ..
+  456  ls
+  457  cd ..
+  458  ls
+  459  git clone https://github.com/pearse1104/X00229157
+  460  ls
+  461  mv me.txt X00229157
+  462  mv runme.txt X00229157
+  463  cd X00229157
+  464  ls
+  465  git checkout ca1branch
+  466  git switch -c ca1branch
+  467  ls
+  468  nano me.txt
+  469  cat me.txt
+  470  git commit -m "ca1ver2"
+  471  git add me.txt
+  472  git commit -m "ca1ver2"
+  473  git push -u origin main
+  474  git status
+  475  git commit -m "ca1ver"
+  476  git push -u origin main
+  477  git add me.txt
+  478  git commit -m "ca1ver"
+  479  ls
+  480  git add runme.txt
+  481  git add me.txt
+  482  git commit -m "ca1ver"
+  483  git push -u origin main
+  484  git auth
+  485  git add origin https://github.com/pearse1104/X00229157
+  486  git remote set-url origin https://github.com/pearse1104/X00229157
+  487  ls
+  488  git add me.txt
+  489  git commit -m "ca1ver2"
+  490  branch
+  491  git branch
+  492  git push origin main
+  493  ls
+  494  git add me.txt
+  495  git add runme.txt
+  496  git commit -m "ca1ver2 commit"
+  497  ls
+  498  git push
+  499  git push branch
+  500  git push -u origin ca1branch
+  501  ls
+  502  git remote add origin https://github.com/NathanFord1703/lab9.git
+  503  ls
+  504  git init
+  505  git remote add origin https://github.com/NathanFord1703/lab9.git
+  506  git clone https://github.com/NathanFord1703/lab9.git
+  507  ls
+  508  cd lab9
+  509  nano validate-data.py
+  510  echo validate-data.py
+  511  python3 validate-data.py
+  512  nano validate-date.py
+  513  rm validate-date.py
+  514  ls
+  515  nano validate-data.py
+  516  python3 validate-data.py
+  517  gh issue create --title "create yaml test script" --label "enhancement" --assignee @me
+  518  mkdir .github/workflows
+  519  mkdir -p .github/workflows
+  520  nano .github/workflows/basictests.yml
+  521  git add .
+  522  git commit -m "Initial lab9 submission"
+  523  git push -u origin main
+  524  nano .github/workflows/basictests.yml
+  525* 
+  526  git commit -m "Fix lab9 submission"
+  527  git push -u origin main
+  528  nano .github/workflows/basictests.yml
+  529  rm .github/workflows/basictests.yml
+  530  nano .github/workflows/basictests.yml
+  531  nano validate-data.py
+  532  git add .
+  533  git commit -m "Fix again lab9 submission"
+  534  git push -u origin main
+  535  nano validate-data.py
+  536  git add .
+  537  git commit -m "Fix again 2 lab9 submission"
+  538  git push -u origin main
+  539  nano .github/workflows/basictests.yml
+  540  rm .github/workflows/basictests.yml
+  541  nano .github/workflows/basictests.yml
+  542  git add .
+  543  git push -u origin main
+  544  git add .
+  545  git commit -m "Fix again 3 lab9 submission"
+  546  git push -u origin main
+  547  rm .github/workflows/basictests.yml
+  548  nano .github/workflows/basictests.yml
+  549  git add .
+  550  git commit -m "Fix again 3 lab9 submission"
+  551  git push -u origin main
+  552  nano .github/workflows/basictests.yml
+  553  git add .
+  554  git commit -m "Fix again 3 lab9 submission"
+  555  git push -u origin main
+  556  git branch -b checkout test
+  557  git -b checkout test
+  558  git checkout -b test
+  559  git add 
+  560  nano validate-data.py
+  561  git add .
+  562  git commit -m "branch testing for validate-data"
+  563  git push -u origin main
+  564  git push origin main
+  565  git push -u origin test
+  566  nano .github/workflows/basictests.yml
+  567  ls
+  568  branch -a
+  569  git branch -a
+  570  git switch main
+  571  nano .github/workflows/basictests.yml
+  572  nano validate-data.py
+  573  nano .github/workflows/basictests.yml
+  574  git add .
+  575  git commit -m "fixing errors"
+  576  git push -u origin main
+  577  nano .github/workflows/basictests.yml
+  578  git add .
+  579  git commit -m "fixing errors"
+  580  git push -u origin main
+  581  git checkout -b realtest
+  582  git add .
+  583  git commit -m "fixing errors testbranch"
+  584  git push -u origin main
+  585  nano .github/workflows/basictests.yml
+  586  git add .
+  587  git commit -m "fixing errors testbranch"
+  588  git push -u origin main
+  589  git push -u origin testbranch
+  590  git push -u origin realtest
+  591  git add .
+  592  git commit -m "fixing errors realtest branch"
+  593  history > history.txt
