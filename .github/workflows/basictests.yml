@@ -22,7 +22,7 @@ jobs:
       - name: Run and verify output
         run: |
 
-          OUTPUT=$(python3 validate-data.py Nathan 0871234567)
+          OUTPUT=$(python3 validate-data.py NathanF 0871234567)
           echo "Script output was: $OUTPUT"
           if [ "$OUTPUT" = "PASS" ]; then
             echo "Test Passed!"
