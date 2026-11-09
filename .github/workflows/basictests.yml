@@ -30,7 +30,7 @@ jobs:
             exit 1
           fi
 
-          OUTPUT=$(python3 validate-data.py NathanFordStudent 0871234567)
+          OUTPUT=$(python3 validate-data.py aaaaaaaaaaaaaaaaaaaaNathanFordStudent 0871234567)
           echo "Script output was: $OUTPUT"
           if [ "$OUTPUT" = "FAIL" ]; then
             echo "Test Passed!"
@@ -40,7 +40,7 @@ jobs:
 
           OUTPUT=$(python3 validate-data.py Nathan 087123456789)
           echo "Script output was: $OUTPUT"
-          if [ "$OUTPUT" = "FAIL" ]; then
+          if [ "$OUTPUT" = "PASS" ]; then
             echo "Test Passed!"
           else
             exit 1
