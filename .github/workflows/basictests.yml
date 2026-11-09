@@ -4,29 +4,32 @@ on:
   push:
     branches:
       - main
+      - test
 
 jobs:
   lab9-basic-tests:
-
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Make script executable
-        run: chmod +x validate-data.py
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
 
-      - name: Test 1
+      - name: Test 1 - Valid Input
         run: |
-          result=$(./validate-data.py Nathan 0871234567)
-          [ "$result" = "PASS" ]
+          output=$(python3 validate-data.py Nathan 0871234567)
+          test "$output" = "PASS"
 
-      - name: Test 2
+      - name: Test 2 - Name Too Long
         run: |
-          result=$(./validate-data.py VeryLongStudentName 0871234567)
-          [ "$result" = "FAIL" ]
+          output=$(python3 validate-data.py VeryLongStudentName 0871234567)
+          test "$output" = "FAIL"
 
-      - name: Test 3
+      - name: Test 3 - Mobile Too Long
         run: |
-          result=$(./validate-data.py Nathan 087123456789)
-          [ "$result" = "FAIL" ]
+          output=$(python3 validate-data.py Nathan 087123456789)
+          test "$output" = "FAIL"
