@@ -1,0 +1,32 @@
+name: Basic Tests
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lab9-basic-tests:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Make script executable
+        run: chmod +x validate-data.sh
+
+      - name: Test 1
+        run: |
+          result=$(./validate-data.sh Nathan 0871234567)
+          [ "$result" = "PASS" ]
+
+      - name: Test 2
+        run: |
+          result=$(./validate-data.sh VeryLongStudentName 0871234567)
+          [ "$result" = "FAIL" ]
+
+      - name: Test 3
+        run: |
+          result=$(./validate-data.sh Nathan 087123456789)
+          [ "$result" = "FAIL" ]
