@@ -38,8 +38,7 @@ jobs:
             exit 1
           fi
 
-          OUTPUT=$(python3 validate-data.py Nathan 087123456789
-)
+          OUTPUT=$(python3 validate-data.py Nathan 087123456789)
           echo "Script output was: $OUTPUT"
           if [ "$OUTPUT" = "FAIL" ]; then
             echo "Test Passed!"
